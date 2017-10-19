@@ -8,7 +8,7 @@ import sys
 from libs import detect_peaks
 
 def process_img(filename):
-  img = cv2.imread('batemans/' + filename, 1)
+  img = cv2.imread('input_imgs/' + filename, 1)
   new_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
   height, width, depth = img.shape
@@ -282,7 +282,7 @@ def process_img(filename):
   cv2.imwrite('dumps/'+filename[:-4]+'_11_result.png', img)
 
 
-filenames =os.listdir('batemans')
+filenames =os.listdir('input_imgs')
 filenames.sort()
 for filename in filenames:
 # for filename in ['Left Camera Image 1067.bmp']:
